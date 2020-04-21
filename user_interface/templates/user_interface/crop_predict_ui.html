@@ -1,0 +1,58 @@
+{% extends "base.html"%}
+{% load bootstrap3 %}
+
+{% block content %}
+  <div class="container" id="content">
+  <br/><br/><br/><br/><br/><br/>
+  <form method="post">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+      <!-- user select state -->
+      <div class="container" id="content">
+        <div class="form-group col-xs-4">
+          <label for="exampleSelect1">State</label>
+            <select class="form-control" name="" id="exampleSelect1">
+              <option value="s1">Uttarakhand</option>
+              <option value="s2">Uttarpradesh</option>
+              <option value="s3">Punjab</option>
+              <option value="s4">Himanchal</option>
+            </select>
+        </div>
+      </div>
+
+      <!-- user select district -->
+      <div class="container" id="content">
+        <div class="form-group col-xs-4">
+            <label for="exampleSelect1">District</label>
+            <select class="form-control" name="" id="exampleSelect1">
+              <option value="d1">Chamoli</option>
+              <option value="d2">Haridwar</option>
+              <option value="d3">Pauri</option>
+            </select>
+        </div>
+      </div>
+
+
+      <!-- user select season -->
+      <div class="container" id="content">
+        <div class="form-group col-xs-4">
+          <label for="exampleSelect1">Season</label>
+          <select class="form-control" name="" id="exampleSelect1">
+            <option value="season1">Kharif</option>
+            <option value="season2">Ravi</option>
+          </select>
+        </div>
+      </div>
+
+
+
+      <!-- Get result button -->
+      <div class="container" id="content">
+        <div class="form-group col-xs-4">
+          <button class="btn btn-default" type="button" name="button">Get Result</button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+{% endblock %}
