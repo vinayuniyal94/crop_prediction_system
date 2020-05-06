@@ -1,17 +1,19 @@
-{% extends "base.html"%}
+{% load static %}
 {% load bootstrap3 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
 
 {% block content %}
-  <div class="container" id="content">
+
+<div class="container" id="content">
   <br/><br/><br/><br/><br/><br/>
-  <form method="POST">
-    {% csrf_token %}
-    {% bootstrap_form form %}
+  <form action="{% url 'user_interface:predict' %}" method="post">
+  {% csrf_token %}
       <!-- user select state -->
       <div class="container" id="content">
         <div class="form-group col-xs-4">
           <label for="exampleSelect1">State</label>
-            <select class="form-control" name="" id="exampleSelect1">
+            <select class="form-control" name="State" id="exampleSelect1">
               <option value="s1">Uttarakhand</option>
               <option value="s2">Uttarpradesh</option>
               <option value="s3">Punjab</option>
@@ -24,7 +26,7 @@
       <div class="container" id="content">
         <div class="form-group col-xs-4">
             <label for="exampleSelect1">District</label>
-            <select class="form-control" name="" id="exampleSelect1">
+            <select class="form-control" name="District" id="exampleSelect1">
               <option value="d1">Chamoli</option>
               <option value="d2">Haridwar</option>
               <option value="d3">Pauri</option>
@@ -37,7 +39,7 @@
       <div class="container" id="content">
         <div class="form-group col-xs-4">
           <label for="exampleSelect1">Season</label>
-          <select class="form-control" name="" id="exampleSelect1">
+          <select class="form-control" name="Season" id="exampleSelect1">
             <option value="season1">Kharif</option>
             <option value="season2">Ravi</option>
           </select>
@@ -49,10 +51,10 @@
       <!-- Get result button -->
       <div class="container" id="content">
         <div class="form-group col-xs-4">
-          <button class="btn btn-default" type="button" name="button">Get Result</button>
+          <input class="btn" type="submit" name="Get Result" value="Get Result"/>
         </div>
       </div>
 
-    </form>
-  </div>
+  </form>
+</div>
 {% endblock %}
