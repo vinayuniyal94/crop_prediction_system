@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+    <!-- for using icons in materialize -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+      body{
+        color: #ffffff white;
+      }
+    </style>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('select').formSelect();
+      });
+    </script>
+
+
+  </head>
+  <body>
+    <br/><br/><br/>
+    <nav>
+    <div class="nav-wrapper #004d40 teal darken-4">
+      <div class="container">
+        <a href="#!" class="brand-logo"><b>Crop</b><small> Prediction</small></a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#"></a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <li><a href="#"></a></li>
+        </ul>
+      </div>
+    </div>
+    </nav>
+    <br><br>
+    <div class="container">
+      <div class="card-panel">
+        <form class="" action="" method="post" id="user_form_input">
+          <div class="container">
+            <div class="input-field">
+              <select>
+                <option value="" disabled selected>Choose your option</option>
+                <option value="0">Uttarakhand</option>
+              </select>
+              <label>Choose your state</label>
+            </div>
+          </div>
+
+          <br><br>
+          <div class="container">
+            <div class="input-field">
+              <select>
+                <option value="" disabled selected>Choose your option</option>
+                <option value="0">Haridwar</option>
+                <option value="1">Pauri</option>
+                <option value="2">Deharadun</option>
+              </select>
+              <label>Choose your district</label>
+            </div>
+          </div>
+
+          <br><br>
+          <div class="container">
+            <div class="input-field">
+              <select>
+                <option value="" disabled selected>Choose your option</option>
+                <option value="0">Ravi</option>
+                <option value="1">Kharif</option>
+                <option value="2">Zaid</option>
+              </select>
+              <label>Choose season</label>
+            </div>
+          </div>
+        </form>
+
+        <br><br>
+        <div class="container">
+          <button type="submit" name="button" form="user_form_input" value="submit" class="waves-effect waves-light btn">Result</button>
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+
+
+    <!-- import jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        <!-- custom js & jquery here -->
+        $('select').material_select();
+      });
+    </script>
+
+  </body>
+</html>

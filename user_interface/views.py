@@ -1,21 +1,20 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-
-drop1_dict = [
-    "Uttarakhand","Uttarpradesh",
-]
-
-drop2_dict = [
-    "Chamoli", "Haridwar", "Pauri",
-]
-
-drop3_dict = [
-    "Ravi", "Kharif", "Zaid"
-]
+from . predict import predict
 
 
+# 29 indian states list
+drop1_dict = ["Uttarakhand","Uttarpradesh",]
 
-# Create your views here.
+# 13 district of uttrakhand list
+drop2_dict = ["Chamoli", "Haridwar", "Pauri",]
+
+# season list
+drop3_dict = ["Ravi", "Kharif", "Zaid"]
+
+
+
+# predict funtion takes the input from the crop prediction html page than saves it to python variable
 def predict(request):
     state_value = request.POST['State']
     selected_state = drop1_dict[int(state_value)]
@@ -31,4 +30,9 @@ def predict(request):
         "district":selected_district,
         "season":selected_season,
     }
+
+    
+
+
+
     return render(request, 'user_interface/prediction_result.html', context)
