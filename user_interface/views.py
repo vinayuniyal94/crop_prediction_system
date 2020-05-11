@@ -15,13 +15,22 @@ drop3_dict = ["Ravi", "Kharif", "Zaid"]
 
 # predict funtion takes the input from the crop prediction html page than saves it to python variable
 def predict(request):
-    state_value = request.POST['State']
+    if 'State' in request.POST:
+        state_value = request.POST['State']
+    else:
+        state_value = False
     selected_state = drop1_dict[int(state_value)]
 
-    district_value = request.POST['District']
+    if 'District' in request.POST:
+        district_value = request.POST['District']
+    else:
+        district_value = False
     selected_district = drop2_dict[int(district_value)]
 
-    season_value = request.POST['Season']
+    if 'Season' in request.POST:
+        season_value = request.POST['Season']
+    else:
+        season_value = False    
     selected_season = drop3_dict[int(season_value)]
 
     context = {

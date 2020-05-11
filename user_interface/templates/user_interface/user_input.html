@@ -2,20 +2,25 @@
 {% load static %}
 
 {% block body %}
+
   <br><br>
   <!-- 3 user inputs -->
   <div class="container">
     <div class="card-panel">
       <!-- form start -->
-      <form class="" action="" method="post" id="user_form_input">
+      <form class="" action="{% url 'user_interface:predict' %}" method="post" id="user_form_input">
+        {% csrf_token %}
         <!-- select state -->
         <div class="container">
           <div class="input-field">
-            <select>
-              <option value="" disabled selected>Choose your option</option>
+            <select name="State" id="State">
+              <option value="" disabled selected>Choose your state</option>
               <option value="0">Uttarakhand</option>
+              <!--
+              <option value="1">Uttarapradesh</option>
+              -->
             </select>
-            <label>Choose your state</label>
+            <label>State</label>
           </div>
         </div>
 
@@ -23,13 +28,8 @@
         <!-- select district -->
         <div class="container">
           <div class="input-field">
-            <select>
-              <option value="" disabled selected>Choose your option</option>
-              <option value="0">Haridwar</option>
-              <option value="1">Pauri</option>
-              <option value="2">Deharadun</option>
-            </select>
-            <label>Choose your district</label>
+            <input type="number" name="pin_code" value="" id="pin_code" placeholder="Enter Pincode">
+            <label for="pin_code">Area Pincode</label>
           </div>
         </div>
 
@@ -37,13 +37,13 @@
         <!-- select season -->
         <div class="container">
           <div class="input-field">
-            <select>
-              <option value="" disabled selected>Choose your option</option>
+            <select name="Season">
+              <option value="" disabled selected>Choose season</option>
               <option value="0">Ravi</option>
               <option value="1">Kharif</option>
               <option value="2">Zaid</option>
             </select>
-            <label>Choose season</label>
+            <label>Season</label>
           </div>
         </div>
       </form> <!-- form close here -->
@@ -59,19 +59,7 @@
   </div> <!-- container div closed -->
 
 
-
-
-
-  <!-- import jquery-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function(){
-      <!-- custom js & jquery here -->
-      $('select').material_select();
-    });
-  </script>
+  <script type="text/javascript" src="{% static 'user_interface/js/dropdown.js' %}"></script>
+  <script type="text/javascript" src="{% static 'user_interface/js/dynamic.js' %}"></script>
 
 {% endblock body %}
