@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from . predict import predict
 
 
 # 29 indian states list
@@ -30,9 +29,4 @@ def predict(request):
         "district":selected_district,
         "season":selected_season,
     }
-
-    
-
-
-
     return render(request, 'user_interface/prediction_result.html', context)

@@ -1,21 +1,25 @@
-<!-- Part Of Home.html -->
-<br>
-<div class="container">
-  <div class="row">
-    <div class="col s12 m5">
-      <div class="card">
-        <div class="card-image">
-          <img src="/home/vinay/Documents/PROJECT/crop_prediction/static/images/bgImg2.jpg">
-          <span class="card-title">Get personalized result</span>
-        </div>
-        <div class="card-content">
-          <p>Your crops health determines your countries health and your wealth directly uplifts the Economy
-          This is your chance to predict what's best suited for your <b>area</b></p>
-        </div>
-        <div class="card-action">
-          <a class="waves-effect waves-light btn #00695c teal darken-3">predict</a>
+{% extends "base.html" %}
+{% load static %}
+{% block body %}
+  <!-- Part Of Home.html -->
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m5">
+        <div class="card">
+          <div class="card-image">
+            <img src="{% static '/images/bgImg2.jpg' %}">
+            <span class="card-title">Get personalized result</span>
+          </div>
+          <div class="card-content">
+            <p>Your crops health determines your countries health and your wealth directly uplifts the Economy
+            This is your chance to predict what's best suited for your <b>area</b></p>
+          </div>
+          <div class="card-action">
+            <a href="{% url 'user_input' %}" class="waves-effect waves-light btn #00695c teal darken-3">predict</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+{% endblock body %}

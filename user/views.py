@@ -29,4 +29,4 @@ def logout_view(request):
 
 # call for input user
 def user_input(request):
-    return render(request, "user_interface/crop_predict_ui.html")
+    return render(request, "user_interface/user_input.html")

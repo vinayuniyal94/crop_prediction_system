@@ -17,7 +17,9 @@ from django.contrib import admin
 from django.urls import path, include
 from . import views
 urlpatterns = [
+    path('', views.crop_predict, name="home"),
+    path('', views.user_input, name="user_input"),
     path('user_interface/', include('user_interface.urls', namespace="user_interface")),
-    path('', include('user.urls')),
+    path('user/', include('user.urls')),
     path('admin/', admin.site.urls),
 ]
