@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    {% block content %}
-    <div>
-      <h1>{{state}}, {{district}}, {{season}}</h1>
-    {% endblock  %}
-  </body>
-</html>
+{% extends "base.html" %}
+
+{% block body %}
+  <div class="container">
+      <div class="card-panel">
+        <h5>State    : {{State_Name}}</h5>
+        <h5>Season   : {{Season}}</h5>
+        <h5>Result   : {{Result}} Quintel/Hactere</h5>
+      </div>
+  </div>
+{% endblock %}
