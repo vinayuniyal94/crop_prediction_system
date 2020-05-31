@@ -30,7 +30,7 @@ def pre_process(df):
 
 def prediction(df):
     data = pre_process(df)
-    model = joblib.load("/home/vinay/Documents/PROJECT/crop_prediction/ML/crop_model.pkl")
+    model = joblib.load("ML/crop_model.pkl")
     result = model.predict(data)
     return result
 

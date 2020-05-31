@@ -3,7 +3,7 @@ import numpy as np
 
 from ML.final_crop import getData
 
-df = pd.read_csv("/home/vinay/Documents/PROJECT/crop_prediction/static/data_set/pin.csv").drop(
+df = pd.read_csv("static/data_set/pin.csv").drop(
     ['Unnamed: 0'], axis=1
 )
 
