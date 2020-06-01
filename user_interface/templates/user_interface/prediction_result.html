@@ -1,12 +1,26 @@
 {% extends "base.html" %}
-
 {% block body %}
   <div class="container">
       <div class="card-panel">
-        <h5>State    : {{State_Name}}</h5>
-        <h5>Season   : {{Season}}</h5>
-        <h5>Crop     : {{Crop}}</h5>
-        <h5>Production   : {{Result}} Quintel/Hactere</h5>
+        <div class="container">
+          <h5>Your Prediction</h5>
+          <br>
+          <!-- State name -->
+          <label for="state">State</label>
+          <p id="state">{{State_Name}}</p>
+
+          <!-- Season -->
+          <label for="season">Season</label>
+          <p id="season">{{Season}}</p>
+
+          <!-- Crop Name -->
+          <label for="crop">Crop Name</label>
+          <p id="crop">{{Crop}}</p>
+
+          <!-- Result -->
+          <label for="result">Expected Production</label>
+          <p id="result">{{Result}} Quintel/Hactere</p>
+        </div>
       </div>
   </div>
 {% endblock %}
