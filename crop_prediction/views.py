@@ -1,7 +1,10 @@
 from django.shortcuts import render
 
-def crop_predict(request):
+def home(request):
     return render(request, "home.html")
 
-def user_input(request):
+def checkProduction(request):
     return render(request, "user_interface/user_input.html")
+
+def predictCrop(request):
+    return render(request, "user_interface/predictCrop_userInput.html")

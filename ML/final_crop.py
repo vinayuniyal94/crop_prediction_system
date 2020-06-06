@@ -4,8 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeRegressor
 import joblib
 
-# data = pd.read_csv("crop_production.csv")
-
+# Dictionary as an input to machine learning model
 user_input = {
     # "State_Name":"Uttar Pradesh",
     # "Season":"Kharif",
@@ -14,8 +13,8 @@ user_input = {
 }
 
 
+# data preprocessing function
 def pre_process(df):
-#     data = data.drop(["District_Name","Crop_Year"], axis=1)
 
     def label_encoding(dataset,data_colounm):
         label = LabelEncoder()
@@ -28,6 +27,7 @@ def pre_process(df):
     return df
 
 
+# calling data preprocessing funtion then calling the model for correct prediction
 def prediction(df):
     data = pre_process(df)
     model = joblib.load("ML/crop_model.pkl")
@@ -36,10 +36,11 @@ def prediction(df):
 
 
 def getData(context):
+    # context dictionary assiging to user_input dictionary
     user_input = context
     user_input = pd.DataFrame(user_input, index=[0])
 
-    #print(user_input)
+    # calling prediction method with user_input dictionary as input
     x = prediction(user_input)
-    print(x[0])
+
     return int(x[0])

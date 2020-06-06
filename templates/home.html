@@ -2,14 +2,16 @@
 {% load static %}
 {% block body %}
   <!-- Part Of Home.html -->
-  <br>
+  <br><br><br>
   <div class="container">
     <div class="row">
-      <div class="col s12 m5">
+
+      <!-- card for checkProduce
+      <div class="col s12 m4">
         <div class="card">
           <div class="card-image">
             <img src="{% static '/images/bgImg2.jpg' %}">
-            <span class="card-title">Get personalized result</span>
+            <span class="card-title">How much</span>
           </div>
           <div class="card-content">
             <p>Your crops health determines your countries health and your wealth directly uplifts the Economy
@@ -20,6 +22,25 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
+      -->
+
+      <!-- card for predict crop option predictCrop
+      <div class="col s12 m4">
+        <div class="card">
+          <div class="card-image">
+            <img src="{% static '/images/bgImg2.jpg' %}">
+            <span class="card-title">How much</span>
+          </div>
+          <div class="card-content">
+            <p>Your crops health determines your countries health and your wealth directly uplifts the Economy
+            This is your chance to predict what's best suited for your <b>area</b></p>
+          </div>
+          <div class="card-action">
+            <a href="{% url 'user_input' %}" class="waves-effect waves-light btn #00695c teal darken-3">predict</a>
+          </div>
+        </div>
+      </div>
+      -->
+    </div> <!-- end of row inside container containing two card checkproduce and predictcrop -->
+  </div> <!-- end of container -->
 {% endblock body %}

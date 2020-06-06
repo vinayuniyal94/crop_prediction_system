@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Home</title>
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
@@ -21,19 +21,24 @@
         color: #ffffff white;
       }
     </style>
+
   </head>
   <body>
-    <br/><br/><br/>
+    <div class="container">
+      <h3 class="#004d40 teal-text text-darken-4"><b>Crop </b>Prediction</h3>
+    </div>
     <nav>
     <div class="nav-wrapper #004d40 teal darken-4">
       <div class="container">
-        <a href="#!" class="brand-logo"><b>Crop</b><small> Prediction</small></a>
+        <a href="{% url 'home' %}" class="brand-logo"><b>Crop</b><small> Prediction</small></a>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="#"></a></li>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'checkProduction' %}">Check Production</a></li>
+          <li><a href="{% url 'predictCrop' %}">Predict Crops</a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
-          <li><a href="#"></a></li>
+          <li><a href="#">Home</a></li>
         </ul>
       </div>
     </div>
@@ -42,7 +47,6 @@
     {% block body %}
 
     {% endblock body %}
-
 
   </body>
 </html>
