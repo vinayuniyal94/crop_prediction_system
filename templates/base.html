@@ -34,10 +34,23 @@
           <li><a href="{% url 'checkProduction' %}">Check Production</a></li>
           <li><a href="{% url 'predictCrop' %}">Predict Crops</a></li>
         </ul>
+        <!-- for mobile screens -->
+        <ul class="side-nav" id="mobile-demo">
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'checkProduction' %}">Check Production</a></li>
+          <li><a href="{% url 'predictCrop' %}">Predict Crops</a></li>
+        </ul>
+
       </div>
     </div>
     </nav>
 
+    <!-- <script for side nave bar for mobile  -->
+    <script type="text/javascript">
+        $( document ).ready(function(){
+          $(".button-collapse").sideNav();
+        })
+    </script>
     {% block body %}
 
     {% endblock body %}
