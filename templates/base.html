@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -16,21 +17,17 @@
     <!-- for using icons in materialize -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <style>
-      body{
-        color: #ffffff white;
-      }
-    </style>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
 
   </head>
   <body>
     <div class="container">
-      <h3 class="#004d40 teal-text text-darken-4"><b>Crop </b>Prediction</h3>
+      <img src="{% static 'logo/cropLogo3.png' %}" alt="" id="logo">
     </div>
     <nav>
-    <div class="nav-wrapper #004d40 teal darken-4">
+    <div class="nav-wrapper #00c853 green accent-4">
       <div class="container">
-        <a href="{% url 'home' %}" class="brand-logo"><b>Crop</b><small> Prediction</small></a>
+        <a href="{% url 'home' %}" class="brand-logo"><b><small>Crop prediction system</small></b></a>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
           <li><a href="{% url 'home' %}">Home</a></li>
