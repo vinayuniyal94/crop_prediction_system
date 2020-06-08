@@ -2,45 +2,48 @@
 {% load static %}
 {% block body %}
   <!-- Part Of Home.html -->
-  <br><br><br>
+  <br><br>
   <div class="container">
     <div class="row">
-
-      <!-- card for checkProduce
-      <div class="col s12 m4">
-        <div class="card">
-          <div class="card-image">
-            <img src="{% static '/images/bgImg2.jpg' %}">
-            <span class="card-title">How much</span>
-          </div>
-          <div class="card-content">
-            <p>Your crops health determines your countries health and your wealth directly uplifts the Economy
-            This is your chance to predict what's best suited for your <b>area</b></p>
-          </div>
-          <div class="card-action">
-            <a href="{% url 'user_input' %}" class="waves-effect waves-light btn #00695c teal darken-3">predict</a>
-          </div>
-        </div>
-      </div>
-      -->
-
-      <!-- card for predict crop option predictCrop
-      <div class="col s12 m4">
-        <div class="card">
-          <div class="card-image">
-            <img src="{% static '/images/bgImg2.jpg' %}">
-            <span class="card-title">How much</span>
-          </div>
-          <div class="card-content">
-            <p>Your crops health determines your countries health and your wealth directly uplifts the Economy
-            This is your chance to predict what's best suited for your <b>area</b></p>
-          </div>
-          <div class="card-action">
-            <a href="{% url 'user_input' %}" class="waves-effect waves-light btn #00695c teal darken-3">predict</a>
-          </div>
-        </div>
-      </div>
-      -->
+        <div class="slider">
+         <ul class="slides">
+           <li>
+             <img src="{% static 'images/bgImg1.jpg' %}"> <!-- random image -->
+             <div class="caption center-align">
+               <h3>Get to know which crop to sow</h3>
+               <h5 class="light grey-text text-lighten-3">Go green because the trend and technologies are changing</h5>
+             </div>
+           </li>
+           <li>
+             <img src="{% static 'images/bgImg2.jpg' %}"> <!-- random image -->
+             <div class="caption left-align">
+               <h3>Check your Production</h3>
+               <h5 class="light grey-text text-lighten-3">Get to know how much Production you can take out</h5>
+             </div>
+           </li>
+           <li>
+             <img src="{% static 'images/bgImg3.jpg' %}"> <!-- random image -->
+             <div class="caption right-align">
+               <h3>Get customized result acording to your location, land and season</h3>
+               <h5 class="light grey-text text-lighten-3">Know your enviroment, grow acordingly ..!! </h5>
+             </div>
+           </li>
+           <li>
+             <img src="{% static 'images/bgImg4.jpg' %}"> <!-- random image -->
+             <div class="caption center-align">
+               <h3>Know what your crop need</h3>
+               <h5 class="light grey-text text-lighten-3">Be prepared update, upgrade and innovate ..!!</h5>
+             </div>
+           </li>
+         </ul>
+       </div>
     </div> <!-- end of row inside container containing two card checkproduce and predictcrop -->
   </div> <!-- end of container -->
+
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $('.slider').slider();
+  });
+  </script>
+
 {% endblock body %}

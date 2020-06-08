@@ -20,6 +20,8 @@ urlpatterns = [
     path('', views.home, name="home"),
     path('checkProduction/', views.checkProduction, name="checkProduction"),
     path('predictCrop/', views.predictCrop, name="predictCrop"),
+    path('userLogin/', views.userLogin, name="userLogin"),
+    path('userSignup/', views.userSignup, name="userSignup"),
     path('user_interface/', include('user_interface.urls', namespace="user_interface")),
     path('user/', include('user.urls')),
     path('admin/', admin.site.urls),
