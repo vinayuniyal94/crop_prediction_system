@@ -24,6 +24,7 @@
     <div class="container">
       <img src="{% static 'logo/cropLogo3.png' %}" href="{% url 'home' %}" alt="" id="logo">
     </div>
+
     <nav>
     <div class="nav-wrapper #00c853 green accent-4">
       <div class="container">
@@ -33,8 +34,8 @@
           <li><a href="{% url 'home' %}">Home</a></li>
           <li><a href="{% url 'checkProduction' %}">Check Production</a></li>
           <li><a href="{% url 'predictCrop' %}">Predict Crops</a></li>
-          <li><a href="{% url 'userLogin' %}">Login</a></li>
-          <li><a href="{% url 'userSignup' %}">Signup</a></li>
+          <li><a href="{% url 'login' %}">Login</a></li>
+          <li><a href="{% url 'register' %}">Signup</a></li>
         </ul>
         <!-- for mobile screens -->
         <ul class="side-nav" id="mobile-demo">

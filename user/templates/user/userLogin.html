@@ -3,7 +3,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Login</title>
 
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
@@ -20,82 +20,50 @@
 
     <style media="screen">
       body{
-        background-color: #69f0ae;
+        background-color: #c8e6c9;
       }
-      #login-card{
-        margin-left: 80px;
-        margin-right: 0px;
-        margin-top: 80px ;
-        margin-bottom: ;
-        width: 1200px;
-      }
-
-      .card-image{
-        margin-left: 5px;
-        margin-right: 10px;
-        margin-top: 5px ;
-        margin-bottom: 5px;
-      }
-      .card-content{
-        margin-left: 0px;
-        margin-right: 0px;
-        margin-top: 0px ;
-        margin-bottom: 0px;
-      }
-
-    </style>
+      </style>
 
   </head>
   <body>
-    <!-- login form -->
-    <div class="container" id="login-card">
-      <div class="row">
-        <div class="col s12 m7">
-          <div class="card horizontal">
-            <div class="card-image">
-              <img src="{% static 'images/loginPage.jpeg' %}">
-            </div>
-            <div class="card-stacked">
-              <div class="card-content">
-                <div class="row">
-                  <header><h5>User Login</h5></header>
-                </div>
+    <br><br>
+    <div class="container">
+      <div class="card-panel">
+        <div class="container">
+          <div class="row">
+            <h3>Login here</h3>
+          </div>
 
-                <br>
-                <form class="" action="" method="post">
-                  {% csrf_token %}
-                 <!-- Enter username -->
-                 <div class="row">
-                   <div class="input-field">
-                     <input type="text" name="username" value="username">
-                     <label for="username">Enter Username</label>
-                   </div>
-                 </div>
-
-                 <br>
-                 <!-- Enter password -->
-                 <div class="row">
-                   <div class="input-field">
-                     <input type="password" name="password" value="password">
-                     <label for="password">Enter Password</label>
-                   </div>
-                 </div>
-
-                 <br>
-                 <!-- submit button for login form -->
-                 <div class="row">
-                   <div class="input-field">
-                     <input class="btn" type="submit" name="login" value="Login">
-                   </div>
-                 </div>
-
-                </form>
+          <form method="POST">
+            {% csrf_token %}
+            <br>
+            <div class="row">
+              <div class="input-field">
+                <input type="text" name="username" value="">
+                <label for="username">Enter Username</label>
               </div>
             </div>
-          </div>
+
+            <br>
+            <div class="row">
+              <div class="input-field">
+                <input type="password" name="password" value="">
+                <label for="password">Enter Password</label>
+              </div>
+            </div>
+
+            <br>
+            <!-- btn for login -->
+            <div class="row">
+              <div class="input-field">
+                  <input class="btn" type="submit" name="login" value="Login">
+              </div>
+            </div>
+
+          </form>
+          <br><br>
         </div>
       </div>
     </div>
-
   </body>
 </html>
