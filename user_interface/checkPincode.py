@@ -3,9 +3,7 @@ import numpy as np
 
 from ML.final_crop import getData
 
-df = pd.read_csv("static/data_set/pin.csv").drop(
-    ['Unnamed: 0'], axis=1
-)
+df = pd.read_csv("static/data_set/ukPin.csv")
 
 
 #for getting the district
